@@ -1,0 +1,39 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    gap: 0.5rem; /* space between box and label text */
+    font-size: 14px;
+    margin: 0.5em;
+}
+
+/* Hide native checkbox */
+.input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* The box */
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 0.3em;
+    background-color: #eee;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover */
+.wrapper:hover .box {
+    background-color: #ddd;
+}
+
+/* Checked */
+.input:checked + .box {
+    background-color: var(--color-primary);
+    color: white;
+}

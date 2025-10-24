@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn, .btn::before, .btn::after {
+    box-sizing: border-box;
+    color-scheme: light dark;
+}
+
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 0.5em;
+    color-scheme: light dark;
+    /* remove box-shadow here so sizes control it */
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-secondary {
+    outline: 0.2em solid var(--color-gray);
+    outline-offset: -0.2em;
+    background: light-dark(var(--color-white), var(--color-dark));
+    color: light-dark(var(--color-dark), var(--color-white));
+}
+
+/* pressed state */
+.btn:disabled {
+    box-shadow: none !important;
+    background-color: transparent;
+}
+.btn:active {
+    box-shadow: none;
+}
+
+/* === Sizes (now with correct color inheritance) === */
+.btn-xl {
+    height: 64px;
+    min-width: 200px;
+    font: 500 24px/32px var(--font-body);
+    border-radius: 14px;
+    padding: 36px 24px;
+    box-shadow: 0 6px 0 var(--color-primary-active);
+}
+.btn-xl.btn-secondary {
+    box-shadow: 0 6px 0 var(--color-gray-dark);
+}
+.btn-xl:active {
+    transform: translateY(6px);
+}
+
+.btn-l {
+    height: 48px;
+    min-width: 160px;
+    font: 400 18px/28px var(--font-body);
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 0 var(--color-primary-active);
+}
+.btn-l.btn-secondary {
+    box-shadow: 0 5px 0 var(--color-gray-dark);
+}
+.btn-l:active {
+    transform: translateY(5px);
+}
+
+.btn-m {
+    height: 36px;
+    min-width: 120px;
+    font: 400 16px/24px var(--font-body);
+    border-radius: 7px;
+    padding: 24px 16px;
+    box-shadow: 0 4px 0 var(--color-primary-active);
+}
+.btn-m.btn-secondary {
+    box-shadow: 0 4px 0 var(--color-gray-dark);
+}
+.btn-m:active {
+    transform: translateY(4px);
+}
+
+.btn-s {
+    height: 24px;
+    min-width: 96px;
+    font: 400 14px/20px var(--font-body);
+    border-radius: 5px;
+    padding: 18px 12px;
+    box-shadow: 0 3px 0 var(--color-primary-active);
+}
+.btn-s.btn-secondary {
+    box-shadow: 0 3px 0 var(--color-gray-dark);
+}
+.btn-s:active {
+    transform: translateY(3px);
+}
+
+.btn-xs {
+    height: 16px;
+    min-width: 78px;
+    font: 400 10px/14px var(--font-body);
+    border-radius: 5px;
+    padding: 15px 10px;
+    box-shadow: 0 2px 0 var(--color-primary-active);
+}
+.btn-xs.btn-secondary {
+    box-shadow: 0 2px 0 var(--color-gray-dark);
+}
+.btn-xs:active {
+    transform: translateY(2px);
+}
+
+/* === Icon buttons === */
+.btn-icon-xl {
+    height: 64px;
+    min-width: 64px;
+    font: 500 24px/32px var(--font-body);
+    border-radius: 14px;
+    padding: 36px;
+    box-shadow: 0 6px 0 var(--color-primary-active);
+}
+.btn-icon-xl.btn-secondary {
+    box-shadow: 0 6px 0 var(--color-gray-dark);
+}
+.btn-icon-xl:active {
+    transform: translateY(6px);
+}
+
+.btn-icon-l {
+    height: 48px;
+    min-width: 48px;
+    font: 400 18px/28px var(--font-body);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 0 var(--color-primary-active);
+}
+.btn-icon-l.btn-secondary {
+    box-shadow: 0 5px 0 var(--color-gray-dark);
+}
+.btn-icon-l:active {
+    transform: translateY(5px);
+}
+
+.btn-icon-m {
+    height: 36px;
+    min-width: 36px;
+    font: 400 16px/24px var(--font-body);
+    border-radius: 7px;
+    padding: 24px;
+    box-shadow: 0 4px 0 var(--color-primary-active);
+}
+.btn-icon-m.btn-secondary {
+    box-shadow: 0 4px 0 var(--color-gray-dark);
+}
+.btn-icon-m:active {
+    transform: translateY(4px);
+}
+
+.btn-icon-s {
+    height: 24px;
+    min-width: 24px;
+    font: 400 14px/20px var(--font-body);
+    border-radius: 5px;
+    padding: 18px;
+    box-shadow: 0 3px 0 var(--color-primary-active);
+}
+.btn-icon-s.btn-secondary {
+    box-shadow: 0 3px 0 var(--color-gray-dark);
+}
+.btn-icon-s:active {
+    transform: translateY(3px);
+}
+
+.btn-icon-xs {
+    height: 16px;
+    min-width: 16px;
+    font: 400 10px/14px var(--font-body);
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 0 var(--color-primary-active);
+}
+.btn-icon-xs.btn-secondary {
+    box-shadow: 0 2px 0 var(--color-gray-dark);
+}
+.btn-icon-xs:active {
+    transform: translateY(2px);
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    height: 1.2em;
+    width: 1.2em;
+}

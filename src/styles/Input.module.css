@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input, .input::before, .input::after {
+    box-sizing: border-box;
+}
+
+.input {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: light-dark(var(--color-white) , var(--color-dark));
+    color: light-dark(var(--color-dark) , var(--color-white));
+    border: none;
+    margin: 0.5em;
+    padding: 0;
+    outline: 0.2em solid var(--color-gray);
+    outline-offset: -0.2em;
+    box-sizing: border-box;
+}
+
+.input:focus-within {
+    outline: 0.2em solid var(--color-primary);
+}
+
+/* === Sizes === */
+.input-xl {
+    height: 64px;
+    min-width: 200px;
+    font: 500 24px/32px var(--font-body);
+    border-radius: 14px;
+    padding: 36px 24px;
+}
+.input-l {
+    height: 48px;
+    min-width: 160px;
+    font: 400 18px/28px var(--font-body);
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+
+.input-m {
+    height: 36px;
+    min-width: 120px;
+    font: 400 16px/24px var(--font-body);
+    border-radius: 7px;
+    padding: 24px 16px;
+
+}
+
+.input-s {
+    height: 24px;
+    min-width: 96px;
+    font: 400 14px/20px var(--font-body);
+    border-radius: 5px;
+    padding: 18px 12px;
+
+}
+
+.input-xs {
+    height: 16px;
+    min-width: 78px;
+    font: 400 10px/14px var(--font-body);
+    border-radius: 5px;
+    padding: 15px 10px;
+
+}
